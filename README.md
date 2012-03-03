@@ -1,8 +1,8 @@
-This is a pure Ruby library that extracts the XML version of an
-AndroidManifest.xml from an Android installer APK package file. To use the script
-just pass the path of the APK file as the first argument. The script will build
-an XML string that can later be parsed or formatted for viewing.
+This is a command-line tool to update the APK file on the Android Market.
 
-This script is a direct port of the Java method from [this thread](http://stackoverflow.com/questions/2097813/how-to-parse-the-androidmanifest-xml-file-inside-an-apk-package)
-that performs the same task.
+Usage:
+  ruby update_apk.rb <google_id> <google_pass> <full_path_to_apk>
 
+Notes:
+  - Make sure you have your app available on the Android Market before executing this script. This script is designed just for UPDATING apps that are already there.
+  - This script depends on the encoded AndroidManifest.xml parser which was originally written by thadd. (https://github.com/thadd/axml2xml.rb)
